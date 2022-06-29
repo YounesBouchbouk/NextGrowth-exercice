@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style></style>
+  <body class="thebody">
+    <script src="./javascript/data.js"></script>
+
+    <table id="myTable" class="table shadow">
+      <thead>
+        <tr class="head">
+          <th class="tstyle">ID</th>
+          <th class="tstyle">Date de creation</th>
+          <th class="tstyle">Etat</th>
+          <th class="tstyle">Nom</th>
+          <th class="tstyle">Prénom</th>
+          <th class="tstyle">Nom d'utilisateur</th>
+          <th class="tstyle">Matricule</th>
+          <th class="tstyle">Action</th>
+        </tr>
+      </thead>
+      <tbody id="testBody"></tbody>
+    </table>
+
+    <div class="pingDiv shadow">
+      <button id="pingmodel" class="shadow">Ajouté utilisateur</button>
+    </div>
+
+    <div class="hidden stylemodul shadow" id="model">
+      <!-- <button id="closeBtn">X</button> -->
+      <form action="">
+        <div class="titlediv">
+          <h1>Ajouté un utilisateur</h1>
+        </div>
+
+        <div class="grid1">
+          <div class="inputcard">
+            <label class="label" for="nom">Name :</label>
+            <input type="text" class="input" id="nom" />
+          </div>
+
+          <div class="inputcard">
+            <label class="label" for="pnom">Prenom :</label>
+            <input type="text" class="input" id="pnom" />
+          </div>
+
+          <div class="inputcard">
+            <label class="label" for="etat">Etat :</label>
+            <select id="etat" class="input">
+              <option value="Validé">Validé</option>
+              <option value="En validation">En validation</option>
+              <option value="Rejeté">Rejeté</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid1">
+          <div class="inputcard">
+            <label class="label" for="user">Nom utilisateur :</label>
+            <input type="text" class="input" id="user" />
+          </div>
+          <div class="inputcard">
+            <label class="label" for="datecrea">Date de creation:</label>
+            <input type="date" class="input" id="datecrea" />
+          </div>
+          <div class="inputcard"></div>
+        </div>
+
+        <div class="grid1">
+          <div class="inputcard">
+            <label class="label" for="mattricule"> Mattricule:</label>
+            <input type="number" class="input" id="mattricule" />
+          </div>
+          <div class="inputcard"></div>
+
+          <div class="inputcard"></div>
+        </div>
+
+        <div class="SaveDiv">
+          <button id="add">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./javascript/popupAction.js"></script>
+
+    <script>
+      const closeBtn = document.getElementById("closeBtn");
+
+      closeBtn.addEventListener("click", () => {
+        closeModule();
+      });
+    </script>
+
+    <script>
+      const pingmodel = document.getElementById("pingmodel");
+      const modeldiv = document.getElementById("model");
+
+      pingmodel.addEventListener("click", () => {
+        closeModule();
+      });
+    </script>
+
+    <script src="./javascript/addItem.js"></script>
+
+    <script src="./javascript/fillTable.js"></script>
+  </body>
+</html>
